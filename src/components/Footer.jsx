@@ -5,7 +5,6 @@ const Footer = () => {
   return (
     <FooterContainer>
       <FooterGrid>
-       
         <FooterSection>
           <h3>Company</h3>
           <ul>
@@ -16,7 +15,6 @@ const Footer = () => {
           </ul>
         </FooterSection>
 
-      
         <FooterSection>
           <h3>Security & Privacy</h3>
           <ul>
@@ -27,19 +25,19 @@ const Footer = () => {
           </ul>
         </FooterSection>
 
-        
         <FooterSection>
           <h3>Subscribe</h3>
           <SubscribeSection>
             <form>
               <label htmlFor="email">Email address:</label>
-              <input type="email" id="email" placeholder="Email address" required />
-              <button type="submit">Sign up</button>
+              <InputWrapper>
+                <input type="email" id="email" placeholder="Email address" required />
+                <button type="submit">Sign up</button>
+              </InputWrapper>
             </form>
           </SubscribeSection>
         </FooterSection>
 
-        
         <DisclaimerSection>
           <p>
             *Statements made on this website have not been evaluated by the U.S.
@@ -56,14 +54,11 @@ const Footer = () => {
 
 export default Footer;
 
-
 const FooterContainer = styled.footer`
   background-color: #4b006e; 
   color: white;
-  height:400px;
   padding: 40px 20px;
 `;
-
 
 const FooterGrid = styled.div`
   display: flex;
@@ -75,7 +70,6 @@ const FooterGrid = styled.div`
     align-items: flex-start;
   }
 `;
-
 
 const FooterSection = styled.div`
   flex: 1;
@@ -107,7 +101,6 @@ const FooterSection = styled.div`
   }
 `;
 
-
 const SubscribeSection = styled.div`
   form {
     display: flex;
@@ -117,35 +110,40 @@ const SubscribeSection = styled.div`
       margin-bottom: 8px; 
       font-size: 1rem; 
     }
+  }
+`;
 
-    input {
-      padding: 12px; 
-      margin-bottom: 12px; 
-      border-radius: 4px;
-      border: none;
-      width: 80%; 
-      font-size: 1rem; 
-    }
+const InputWrapper = styled.div`
+  display: flex;
+  flex-direction: column;
+  width: 100%;
 
-    button {
-      background-color: transparent;
-      width: 100px;
-      color: white;
-      border: 2px solid white; 
-      border-radius: 5px;
-      padding: 12px; 
-      cursor: pointer;
-      font-weight: bold;
-      font-size: 1rem; 
-      transition: background-color 0.3s; 
-    }
+  input {
+    padding: 12px; 
+    margin-bottom: 12px; 
+    border-radius: 4px;
+    border: none;
+    width: 90%; 
+    font-size: 1rem; 
+  }
 
-    button:hover {
+  button {
+    background-color: transparent;
+    color: white;
+    border: 2px solid white; 
+    border-radius: 5px;
+    padding: 12px; 
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 1rem; 
+    transition: background-color 0.3s; 
+    width: 100px; 
+
+    &:hover {
       background-color: #d3c0f0;
     }
   }
 `;
-
 
 const DisclaimerSection = styled.div`
   max-width: 300px;
