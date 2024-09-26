@@ -1,13 +1,19 @@
 import React from 'react';
 import styled from 'styled-components';
+import Image1 from "../Assets/HealthConcern/die.jpg";
+import Image2 from "../Assets/HealthConcern/heart.jpg";
+import Image3 from "../Assets/HealthConcern/stomac.jpg";
+import Image4 from "../Assets/HealthConcern/liver.jpg";
+import Image5 from "../Assets/HealthConcern/joint.jpg";
+import Image6 from "../Assets/HealthConcern/kidney.jpg"
 
 const concerns = [
-  { name: 'Diabetes', image: 'https://via.placeholder.com/100' },
-  { name: 'Heart Care', image: 'https://via.placeholder.com/100' },
-  { name: 'Stomach Care', image: 'https://via.placeholder.com/100' },
-  { name: 'Liver Care', image: 'https://via.placeholder.com/100' },
-  { name: 'Bone, Joint & Muscle Care', image: 'https://via.placeholder.com/100' },
-  { name: 'Kidney Care', image: 'https://via.placeholder.com/100' },
+  { name: 'Diabetes', image: Image1 },
+  { name: 'Heart Care', image: Image2 },
+  { name: 'Stomach Care', image: Image3 },
+  { name: 'Liver Care', image: Image4 },
+  { name: 'Bone, Joint & Muscle Care', image: Image5 },
+  { name: 'Kidney Care', image: Image6 },
 ];
 
 const HealthConcerns = () => {
@@ -29,6 +35,7 @@ const HealthConcerns = () => {
 export default HealthConcerns;
 
 const Container = styled.div`
+// border:2px solid red;
   padding: 20px;
   text-align: center;
 `;
@@ -48,10 +55,11 @@ const Heading = styled.h1`
 `;
 
 const ConcernList = styled.div`
+  width:100%;
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
-  gap: 30px;
+  gap: 40px;
 
   @media (max-width: 1024px) {
     gap: 20px;
@@ -72,7 +80,7 @@ const ConcernItem = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
-  width: 150px;
+  width: 180px;
 
   @media (max-width: 1024px) {
     width: 130px;
@@ -89,8 +97,8 @@ const ConcernItem = styled.div`
 
 const ConcernImage = styled.img`
   border-radius: 8px;
-  width: 150px;
-  height: 150px;
+  width: 180px;
+  height: 180px;
   object-fit: cover;
 
   @media (max-width: 1024px) {

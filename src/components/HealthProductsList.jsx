@@ -79,7 +79,7 @@ const ProductItem = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
-  width: 150px;
+  width: 180px;
 
   @media (max-width: 1024px) {
     width: 130px;
@@ -96,8 +96,8 @@ const ProductItem = styled.div`
 
 const ProductImage = styled.img`
   border-radius: 50%;
-  width: 150px; 
-  height: 150px; 
+  width: 180px; 
+  height: 180px; 
   object-fit: cover;
 
   @media (max-width: 1024px) {

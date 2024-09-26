@@ -1,11 +1,12 @@
 import React from 'react';
 import styled from 'styled-components';
+import Image1 from '../Assets/Infosection/img-1.png'
 
 const InfoSection = () => {
     return (
         <Container>
             <ImageWrapper>
-                <Image src="https://via.placeholder.com/600" alt="Info Image" />
+                <Image src={Image1} alt="Info Image" />
             </ImageWrapper>
             <TextWrapper>
                 <Paragraph>
@@ -38,7 +39,7 @@ const Container = styled.div`
   align-items: flex-start; 
   height: 100%;
   padding: 20px;
-  width: 90%;
+  width: 84%;
   margin: auto; 
   gap: 0; 
 
@@ -55,7 +56,7 @@ const ImageWrapper = styled.div`
 `;
 
 const Image = styled.img`
-  max-width: 100%; 
+  max-width: 90%; 
   height: auto; 
   border-radius: 8px; 
 `;
